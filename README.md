@@ -37,7 +37,7 @@ Android (mobile phone, ARMv7): DNSCrypt server
 
 ### pdnsd
 
-Although pdnsd offers 'neg' feature, it is not very reliable with large DNS blocklists. However, custom `rr` (Resource Record) entries have been tested with a list of over 240 000 blacklisted domains, and it works as expected.
+Although pdnsd offers `neg` feature, it is not very reliable with large DNS blocklists. However, custom `rr` (Resource Record) entries have been tested with a list of over 240 000 blacklisted domains, and it works as expected.
 
 ### DNSCrypt
 
