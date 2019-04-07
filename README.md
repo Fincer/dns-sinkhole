@@ -1,4 +1,4 @@
-# DNS sinkhole
+# [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole)
 
 Generate domain sinkhole (blacklist) files for [DNSCrypt](https://github.com/jedisct1/dnscrypt-proxy) and [pdnsd](http://members.home.nl/p.a.rombouts/pdnsd/) DNS servers. Comparable to Pi-Hole, but uses more simple structure without too much overhead. Generated blacklist files can be added to existing DNS server installations.
 
