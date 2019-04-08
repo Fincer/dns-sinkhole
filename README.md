@@ -89,7 +89,7 @@ Of course, you can apply DNS sinkhole list to your device's `hosts` file (Linux:
 
 `*` By default, domain name lookups are done via UDP port 53, and DNS queries are unencrypted. Thus, anyone between you and the DNS server can read the domain name lookups your applications request. With [DNS-over-HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS), all DNS queries are wrapped in encrypted packets, sent through TCP port 443 and thus making your DNS queries unknown by others excluding you and the DNS server.
 
-`**` You can enforce DNS queries through a proxy, such as via a server of your choise or via [Tor network](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
+`**` You can enforce DNS queries through a proxy, such as via a server of your choice or via [Tor network](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
 
 `***` You can set-up DNS server of your choice to use enforced [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) policy. In other words, if a rogue DNS server to which your DNS query (domain name lookup) is pointed to, breaks DNSSEC chain, the query is being left unanswered.
 
