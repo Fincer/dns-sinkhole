@@ -26,6 +26,8 @@ Useful for blocking ads, tracking & telemetry on:
 
 **NOTE (Tor users):** These lists do not work with SOCKS5/HTTP Tor connections, as DNS resolution is done on the Tor exit nodes, not by your DNS server(s).
 
+**NOTE:** This method may not work if device's `hosts` file is modified so that it overrides accepted DNS policy.
+
 ### Tested on
 
 ```
