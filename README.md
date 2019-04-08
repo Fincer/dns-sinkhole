@@ -45,6 +45,18 @@ Although DNSCrypt offers blacklist feature, it is not very reliable with large D
 
 ----------
 
+## Basic principle/idea
+
+### Single device
+
+![](images/dns-sinkhole_phone.png)
+
+### Multiple devices
+
+![](dns-sinkhole_network.png)
+
+----------
+
 # License
 
 This repository uses MIT license. See [LICENSE](LICENSE) file for details.
