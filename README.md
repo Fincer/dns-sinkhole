@@ -85,13 +85,13 @@ Of course, you can apply DNS sinkhole list to your device's `hosts` file (Linux:
 
 - _Does not scale_: does not apply to a network segment or segments for which you want to block specific domain names. Applies only to single devices.
 
-- _No extra security_, such as enforced DNS-over-HTTPS*, proxy configurations** or DNSSEC*** verification, provided by a properly configured DNS server
+- _No extra security_, such as enforced DNS-over-HTTPS*, proxy configurations**, DNSSEC*** verification or any other useful detailed configuration, provided by a properly configured DNS server
 
-`*` By default, domain name lookups are done via UDP port 53, and DNS queries are unencrypted. Thus, anyone between you and the DNS server can read the domain name lookups your applications request. With [DNS-over-HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS), all DNS queries are wrapped in encrypted packets, sent through TCP port 443 and thus making your DNS queries unknown by others excluding you and the DNS server.
+`*` By default, domain name lookups are done via privileged UDP port 53, and DNS queries are unencrypted. Thus, anyone between you and remote DNS server can read the domain name lookups your applications request. With [DNS-over-HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS), all DNS queries are wrapped in encrypted packets, sent through (HTTPS) TCP port 443 and thus making your DNS queries unknown by others excluding you and the remote DNS server.
 
 `**` You can enforce DNS queries through a proxy, such as via a server of your choice or via [Tor network](https://en.wikipedia.org/wiki/Tor_(anonymity_network))
 
-`***` You can set-up DNS server of your choice to use enforced [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) policy. In other words, if a rogue DNS server to which your DNS query (domain name lookup) is pointed to, breaks DNSSEC chain, the query is being left unanswered.
+`***` You can set-up DNS server of your choice to use enforced [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) policy. In other words, if a rogue, remote DNS server to which your DNS query (domain name lookup) is pointed to, breaks DNSSEC chain, the query is being left unanswered.
 
 ----------
 
