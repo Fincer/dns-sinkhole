@@ -299,20 +299,20 @@ for blacklist in domains_blacklists:
     if not blacklist_dataset is None:
         for line in (fetchdomaindata(blacklist_dataset)):
 
-                if not line in whitelist_fetched_data:
+            if not line in whitelist_fetched_data:
 
-                    if re.search('^\.', line):
-                        pdnsd_line    = "neg { name=*" + line + "; types = domain; }"
-                    elif re.search('\*', line):
-                        pdnsd_line    = "neg { name=" + line + "; types = domain; }"
-                    else:
-                        pdnsd_line    = "rr { name=" + line + "; a=0.0.0.0; }"
-                        dnscrypt_line = line + " " + "0.0.0.0"
+                if re.search('^\.', line):
+                    pdnsd_line    = "neg { name=*" + line + "; types = domain; }"
+                elif re.search('\*', line):
+                    pdnsd_line    = "neg { name=" + line + "; types = domain; }"
+                else:
+                    pdnsd_line    = "rr { name=" + line + "; a=0.0.0.0; }"
+                    dnscrypt_line = line + " " + "0.0.0.0"
 
-                    filewrite(filepath, pdnsd_tempfile, pdnsd_line + '\n', 'a', False)
+                filewrite(filepath, pdnsd_tempfile, pdnsd_line + '\n', 'a', False)
 
-                    if not dnscrypt_line is None:
-                        filewrite(filepath, dnscrypt_tempfile, dnscrypt_line + '\n', 'a', False)
+                if not dnscrypt_line is None:
+                    filewrite(filepath, dnscrypt_tempfile, dnscrypt_line + '\n', 'a', False)
 
 ####################
 # Parse generated list, get only unique lines and write to final file
