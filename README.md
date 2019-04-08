@@ -57,6 +57,18 @@ Although DNSCrypt offers blacklist feature, it is not very reliable with large D
 
 ----------
 
+### Detecting malicious network traffic on Android & (embedded) IoT devices
+
+Network analysis is strongly encouraged for mobile phones and (embedded) IoT devices to detect malicious or unwanted connections which are usually taking place without user's knowledge. You can use results of the analysis to build your own DNS sinkhole blacklist for devices or network segments.
+
+You can use `tcpdump` or `wireshark` for network analysis purposes.
+
+Mobile phones: you may consider limiting count of installed applications. More applications you have, more unwanted network traffic may occur.
+
+Be aware that some applications or websites may break if too greedy policy is taken in place. DNS sinkhole works at best with combination of other network filtering/firewall policy applied, as well (application & network/data link layers). Understanding [OSI model](https://en.wikipedia.org/wiki/OSI_model) and/or [TCP/IP protocol stack](https://en.wikipedia.org/wiki/Internet_protocol_suite) helps you to build a proper policy for your network devices.
+
+----------
+
 # License
 
 This repository uses MIT license. See [LICENSE](LICENSE) file for details.
