@@ -53,7 +53,7 @@ Although DNSCrypt offers blacklist feature, it is not very reliable with large D
 
 ### Multiple devices
 
-![](dns-sinkhole_network.png)
+![](images/dns-sinkhole_network.png)
 
 ----------
 
