@@ -54,7 +54,7 @@ pdnsd_tempfile    = pdnsd_datafile + '.tmp'
 pdnsd_fileheader  = "// Auto-generated list, build date " + timestamp_long + "\n// No addresses of these domains must be resolved" + "\n\n"
 
 pdnsd_outmessage  = ("Move it to /etc/ folder and add the following configuration setting in /etc/pdnsd.conf:\n\n" + \
-"//Blacklisted domains\ninclude { file = \"/etc/" + pdnsd_datafile + "\"; }\n\n--------------------\nRestart pdnsd by issuing command 'systemctl restart pdnsd'\n")
+"//Blacklisted domains\ninclude { file = \"/etc/" + pdnsd_datafile + "\"; }\n\n--------------------\nRestart pdnsd by issuing command 'systemctl restart pdnsd'\n\nYou may need to delete your pdnsd.cache file before the list rules apply.\n")
 
 ####################
 
