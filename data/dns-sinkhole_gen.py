@@ -219,10 +219,10 @@ domains_blacklists = [
 # Exclude these pre-blacklisted domains from the final DNS sinkhole blacklist
 
 domains_whitelists = [
-    {
-      'name': 'My custom whitelist',
-      'url':  'file:///home/' + os.environ['USER']  + '/dns-whitelist.txt'
-    }
+#    {
+#      'name': 'My custom whitelist',
+#      'url':  'file:///home/' + os.environ['USER']  + '/dns-whitelist.txt'
+#    }
 ]
 
 ########################################
@@ -287,10 +287,14 @@ filewrite(filepath, dnscrypt_datafile, dnscrypt_fileheader, 'w', True)
 # Download and parse white/blocklists
 
 ##########
-for whitelist in domains_whitelists:
-    whitelist_dataset = getlist(whitelist, url_timeout)
+if domains_whitelists:
+    for whitelist in domains_whitelists:
+        whitelist_dataset = getlist(whitelist, url_timeout)
 
-whitelist_fetched_data = fetchdomaindata(whitelist_dataset)
+    whitelist_fetched_data = fetchdomaindata(whitelist_dataset)
+else:
+    whitelist_fetched_data = set()
+
 
 ##########
 for blacklist in domains_blacklists:
